@@ -107,7 +107,7 @@ function changeNavbarColor() {
   }
 }
 
-
+//Credit: https://www.youtube.com/watch?v=qARueNQFk04&t=479s
 const navLi = document.querySelectorAll('a')
 const sections = document.querySelectorAll('section')
 
@@ -116,10 +116,14 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     let sectionTop = section.offsetTop;
     if(scrollY >= sectionTop){
-      
+      current = section.getAttribute('id');
     }
-  })
-})
+  });
+  navLi.forEach(a => {
+    a.classList.remove('active')
+    document.querySelector('a[href*= '+ current +']').classList.add('active');
+  });
+});
 
 // listen for scroll events
 window.addEventListener('scroll', changeNavbarColor);
