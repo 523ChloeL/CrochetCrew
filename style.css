@@ -2,6 +2,11 @@
   position: relative;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 .small-image{
 	height:20%;
 	width:20%;
@@ -90,13 +95,13 @@
   .flex-wrap {
     flex-wrap: wrap;
   }
-  .w-full {
+/*   .w-full {
     width: 100%;
-  }
-  @media (min-width: 540px) {
+  } */
+/*   @media (min-width: 540px) {
     .sm\:w-half {
       width: 50%;
-    }
+    } */
 /* 		end form field css */
 
 
@@ -189,9 +194,6 @@
   overflow: hidden;
    z-index: 110000;
 }
-
-
-
 
 #navbar a {
   display: block;
@@ -322,26 +324,7 @@ a.btn:hover {
     border-width: medium;
    font-family: 'Tenor Sans', sans-serif;
     font-variant: small-caps;
-  }
 
-
-@media only screen and (min-height: 451px) {
-.row-top {
-  top:65%
-  }
-}
-
-@media only screen and (min-height: 768px) {
-.row-top {
-  top:78%
-  }
-}
-
-@media only screen and (max-height: 450px) {
-.row-top {
-  top:65%
-  
-  }
 }
 
 .row{
@@ -370,8 +353,7 @@ a.btn:hover {
   .logo {
   text-align: center;
     margin: auto;
-    max-height: 150vh;
-    max-width: 40vw; 
+   
   display: flex;
   justify-content: center;
   }
