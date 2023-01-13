@@ -1,64 +1,3 @@
-//Adding active class to home
-document.getElementById("home").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("about-us").classList.remove("active");
-  document.getElementById("organizations").classList.remove("active");
-  document.getElementById("tutorials").classList.remove("active");
-  document.getElementById("instagram").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-
-
-}
-//Adding active class to about-us
-document.getElementById("about-us").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("organizations").classList.remove("active");
-  document.getElementById("tutorials").classList.remove("active");
-  document.getElementById("instagram").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-}
-
-//Adding active class to organizations
-document.getElementById("organizations").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("about-us").classList.remove("active");
-  document.getElementById("tutorials").classList.remove("active");
-  document.getElementById("instagram").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-}
-
-//Adding active class to Tutorials
-document.getElementById("tutorials").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("about-us").classList.remove("active");
-  document.getElementById("organizations").classList.remove("active");
-  document.getElementById("instagram").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-}
-
-//Adding active class to Instagram / slideshows
-document.getElementById("instagram").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("about-us").classList.remove("active");
-  document.getElementById("organizations").classList.remove("active");
-  document.getElementById("tutorials").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-}
-
-//Adding active class to Contact
-document.getElementById("contact").onclick = function() {
-  this.classList.add("active");
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("about-us").classList.remove("active");
-  document.getElementById("organizations").classList.remove("active");
-  document.getElementById("tutorials").classList.remove("active");
-  document.getElementById("instagram").classList.remove("active");
-}
-
 const img = document.querySelector('img');
 
 img.addEventListener('click', () => {
@@ -115,13 +54,13 @@ window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
     let sectionTop = section.offsetTop;
-    if(scrollY >= sectionTop){
+    if (scrollY >= sectionTop) {
       current = section.getAttribute('id');
     }
   });
   navLi.forEach(a => {
     a.classList.remove('active')
-    document.querySelector('a[href*= '+ current +']').classList.add('active');
+    document.querySelector('a[href*= ' + current + ']').classList.add('active');
   });
 });
 
